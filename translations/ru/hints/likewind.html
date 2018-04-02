@@ -1,0 +1,47 @@
+<body data-author="likewind">
+
+<div class="question-answer">
+    <div class="question">
+        Я совершенно не представляю, как решить эту задачу.
+    </div>
+    <div class="answer">
+        Вам необходимо определить, какое значение (value) является максимальным, а затем вернуть ключ, которому принадлежит 
+        это значение.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мне нужна еще одна подсказка.
+    </div>
+    <div class="answer">
+        Для того, чтобы найти значение определенного ключа словаря, достаточно использовать конструкцию вида:
+        <pre class="brush: python">
+        def best_stock(data):
+            value = data[key]</pre>
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Что мне делать с полученными значениями?
+    </div>
+    <div class="answer">
+        Теперь вам необходимо найти наибольшее из них. Это можно сделать с использованием встроенной функции
+        <a href='https://docs.python.org/3/library/functions.html?highlight=max#max'>max</a>.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        Мне нужно увидеть, как это выглядит в коде.
+    </div>
+    <div class="answer">
+        Решение этой задачи умещается в одну строчку:
+        <pre class="brush: python">
+        def best_stock(data):
+            return max(data, key = lambda x: data[x])</pre>
+    </div>
+</div>
+
+</body>
