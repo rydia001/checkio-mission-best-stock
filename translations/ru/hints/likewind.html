@@ -5,18 +5,19 @@
         Я совершенно не представляю, как решить эту задачу.
     </div>
     <div class="answer">
-        Вам необходимо определить, какое значение (value) является максимальным, а затем вернуть ключ, которому принадлежит 
-        это значение.
+        Сперва вы можете принять за цену самой дорогой акции - ноль (0). Затем сравниваете цену первой акции с переменной,
+        которой присвоили 0, а каждую последующую акцию - с предыдущей. Если новая акция окажется более дорогой - 
+        ее цену нужно занести в переменную, в которой хранится максимальная цена, а её название - в переменную, 
+        где хранится ответ (название самой дорогой акции).
     </div>
 </div>
 
 <div class="question-answer">
     <div class="question">
-        Как мне определить наибольшее значение?
+        Как мне по очереди сравнивать все цены акций?
     </div>
     <div class="answer">
-        Это можно сделать с помощью встроенной функции
-        <a href='https://docs.python.org/3/library/functions.html?highlight=max#max'>max</a>.
+        Используйте <a href='https://docs.python.org/3/tutorial/controlflow.html#for-statements'>цикл for</a>
     </div>
 </div>
 
@@ -25,10 +26,16 @@
         Мне нужно увидеть, как это выглядит в коде.
     </div>
     <div class="answer">
-        Решение этой задачи умещается в одну строчку:
+        Решение этой задачи описанным способом выглядит так:
         <pre class="brush: python">
-def best_stock(data):
-    return max(data, key = lambda x: data[x])</pre>
+def best_stock(data):    
+    max_price = 0
+    answer = ''
+    for s in data:
+        if data[s] > max_price:
+            max_price = data[s]
+            answer = s
+    return answer</pre>
     </div>
 </div>
 
