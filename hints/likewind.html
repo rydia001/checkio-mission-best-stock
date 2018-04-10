@@ -1,0 +1,42 @@
+<body data-author="likewind">
+
+<div class="question-answer">
+    <div class="question">
+        I have absolutely no idea how to solve this task.
+    </div>
+    <div class="answer">
+        First of all, you can take zero (0) as the price of the most expensive stock. Then compare the price of the first stock with the variable
+        that was assigned to 0, and each of the following stocks with the previous one. If the new stock turns out to be more expensive,  
+        its price should be placed in the variable, which contains the maximum price, and its name - in the variable,  
+        where the answer is stored (the name of the most expensive stock).
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        How do I compare all of the stock prices in turn?
+    </div>
+    <div class="answer">
+        Use the <a href='https://docs.python.org/3/tutorial/controlflow.html#for-statements'>for cycle</a>.
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        I need to see it in code.
+    </div>
+    <div class="answer">
+        The solution of this task when using the method described above looks like this:
+        <pre class="brush: python">
+def best_stock(data):    
+    max_price = 0
+    answer = ''
+    for s in data:
+        if data[s] > max_price:
+            max_price = data[s]
+            answer = s
+    return answer</pre>
+    </div>
+</div>
+
+</body>
