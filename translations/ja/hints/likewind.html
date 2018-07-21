@@ -1,0 +1,40 @@
+<body data-author="likewind">
+
+<div class="question-answer">
+    <div class="question">
+        どうやって解けばいいかまったくわかりません。
+    </div>
+    <div class="answer">
+        最初に、一番高い株価の名前として変数に0をセットします。次に最初の株価と0にセットされた変数の値を比較し、同様に次の株価とも比較していきます。
+        もし新しい株価がより高ければ、その値が一番高い株価に入れられ、その名前を記録します。すべての株価を見たとき、名前の変数に入っている株が答えです。
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        どうすれば全ての株価を順番に比較できますか？
+    </div>
+    <div class="answer">
+        <a href='https://docs.python.org/3/tutorial/controlflow.html#for-statements'>for文</a>を使います。
+    </div>
+</div>
+
+<div class="question-answer">
+    <div class="question">
+        コードの例をください。（訳注：答えが含まれます！）
+    </div>
+    <div class="answer">
+        今回の例ではこのようになります：
+        <pre class="brush: python">
+def best_stock(data):    
+    max_price = 0
+    answer = ''
+    for s in data:
+        if data[s] > max_price:
+            max_price = data[s]
+            answer = s
+    return answer</pre>
+    </div>
+</div>
+
+</body>
