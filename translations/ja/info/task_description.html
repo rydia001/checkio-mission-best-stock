@@ -1,0 +1,52 @@
+<!-- Describe task in general -->
+
+<p>
+    現在の株価(Stock price)が与えられます。どの株が最も高いか見つけてください。 
+</p>
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> 市場のIDコードがキーで、その株価が値である辞書(dict)。
+</p>
+
+<p>
+    <strong>出力: </strong> 市場のIDコードを表す文字列。
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+    <p>
+        <strong>例:</strong>
+    </p>
+
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">bestStock({
+    'CAC': 10.0,
+    'ATX': 390.2,
+    'WIG': 1.2
+}) == 'ATX'
+bestStock({
+    'CAC': 91.1,
+    'ATX': 1.01,
+    'TASI': 120.9
+}) == 'TASI'
+</pre>
+{% else %}
+<pre class="brush: python">best_stock({
+    'CAC': 10.0,
+    'ATX': 390.2,
+    'WIG': 1.2
+}) == 'ATX'
+best_stock({
+    'CAC': 91.1,
+    'ATX': 1.01,
+    'TASI': 120.9
+}) == 'TASI'
+</pre>
+{% endif %}
+</div>
+
+<p>
+    <strong>条件: </strong> 同じ価格は複数存在しない。
+</p>
